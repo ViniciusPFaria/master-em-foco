@@ -35,28 +35,42 @@ controls.querySelectorAll('button').forEach(button=>button.addEventListener('cli
 }));
 selectCase('master');
 
-const rppsTools = document.querySelector('.rpps-tools');
+const rppsFilters = document.querySelector('.rpps-filters');
 const rppsRows = [...document.querySelectorAll('.rpps-row')];
-const rppsSearch = document.querySelector('#rpps-search');
-const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
-const partyQueries = new Set(rppsRows.flatMap(row=>JSON.parse(row.dataset.parties).map(normalize)));
+const partySummary = document.querySelector('.party-totals');
 let rppsType = 'all';
 function filterRpps() {
-  const query = normalize(rppsSearch.value);
   let count = 0;
+  let unconfirmed = 0;
+  const parties = new Map();
   rppsRows.forEach(row=>{
-    const matchesQuery = partyQueries.has(query) ? JSON.parse(row.dataset.parties).some(party=>normalize(party)===query) : normalize(row.dataset.search).includes(query);
-    const visible = (rppsType === 'all' || row.dataset.type === rppsType) && matchesQuery;
+    const visible = rppsType === 'all' || row.dataset.type === rppsType;
     row.hidden = !visible;
-    if (visible) count++;
+    if (visible) {
+      count++;
+      const party = row.dataset.countParty;
+      if (party) parties.set(party,(parties.get(party)||0)+1);
+      else unconfirmed++;
+    }
   });
   document.querySelector('.rpps-count').textContent = `${count} de ${rppsRows.length} regimes exibidos.`;
   document.querySelector('.rpps-empty').hidden = count !== 0;
+  const totals = [...parties].sort((a,b)=>b[1]-a[1] || a[0].localeCompare(b[0],'pt-BR'));
+  if (unconfirmed) totals.push(['Não confirmado',unconfirmed]);
+  partySummary.replaceChildren(...totals.map(([party,total])=>{
+    const item = document.createElement('li');
+    item.className = `party-tally${party === 'Não confirmado' ? ' party-tally-uncertain' : ''}`;
+    const label = document.createElement('span');
+    label.textContent = party;
+    const value = document.createElement('strong');
+    value.textContent = String(total);
+    item.append(label,value);
+    return item;
+  }));
 }
-rppsTools.hidden = false;
-rppsTools.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
+rppsFilters.hidden = false;
+rppsFilters.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
   rppsType = button.dataset.type;
-  rppsTools.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+  rppsFilters.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
   filterRpps();
 }));
-rppsSearch.addEventListener('input',filterRpps);

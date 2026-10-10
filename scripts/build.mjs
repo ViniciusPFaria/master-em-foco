@@ -13,6 +13,11 @@ const enrichedRpps = affected.rpps.map(item => {
   if (!politicalContext?.leaders.length || !politicalContext.sources.length) throw new Error(`Contexto político sem nomes ou fontes: ${item.location}`);
   return {...item, politicalContext};
 });
+const confirmedParty = item => {
+  const leaders = item.politicalContext.leaders;
+  const parties = [...new Set(leaders.map(leader=>leader.party))];
+  return leaders.every(leader=>leader.partyConfirmedAtInvestment) && parties.length === 1 ? parties[0] : '';
+};
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const brl = item => item.amount * (item.currency === 'USD' ? data.exchange.rate : 1);
 const max = Math.max(...data.cases.map(brl));
@@ -49,10 +54,8 @@ const highlights = affected.highlights.map(item => `
   </article>`).join('');
 const rppsRows = enrichedRpps.map(item => {
   const context = item.politicalContext;
-  const search = [item.location,item.uf,item.type,...context.leaders.flatMap(leader=>[leader.name,leader.role,...leader.partyCodes])].join(' ');
-  const parties = [...new Set(context.leaders.flatMap(leader=>leader.partyCodes))];
   return `
-  <tr class="rpps-row" role="row" data-type="${escape(item.type)}" data-search="${escape(search)}" data-parties="${escape(JSON.stringify(parties))}">
+  <tr class="rpps-row" role="row" data-type="${escape(item.type)}" data-count-party="${escape(confirmedParty(item))}">
     <th scope="row" role="rowheader">${escape(item.location)}${context.recoveryNote ? `<span class="rpps-recovery">${escape(context.recoveryNote)}</span>` : ''}</th>
     <td role="cell" data-label="UF">${escape(item.uf)}</td>
     <td role="cell" data-label="Tipo">${item.type === 'estadual' ? 'Estadual' : 'Municipal'}</td>
@@ -70,8 +73,18 @@ const rppsRows = enrichedRpps.map(item => {
     <td role="cell" class="rpps-amount" data-label="Valor aplicado">R$ ${(item.amountBRL/1000000).toLocaleString('pt-BR')} ${item.amountBRL < 2000000 ? 'milhão' : 'milhões'}</td>
   </tr>`;
 }).join('');
+const partyCounts = new Map();
+let unconfirmed = 0;
+enrichedRpps.forEach(item=>{
+  const party = confirmedParty(item);
+  if (party) partyCounts.set(party,(partyCounts.get(party)||0)+1);
+  else unconfirmed++;
+});
+const partyTotals = [...partyCounts].sort((a,b)=>b[1]-a[1] || a[0].localeCompare(b[0],'pt-BR'));
+if (unconfirmed) partyTotals.push(['Não confirmado',unconfirmed]);
+const partySummary = partyTotals.map(([party,count])=>`<li class="party-tally${party === 'Não confirmado' ? ' party-tally-uncertain' : ''}"><span>${escape(party)}</span><strong>${count}</strong></li>`).join('');
 mkdirSync(path.join(root, 'dist'), { recursive: true });
-writeFileSync(path.join(root, 'dist/index.html'), template.replace('{{ROWS}}', rows).replace('{{DETAILS}}', details).replace('{{EXCHANGE_URL}}', escape(data.exchange.url)).replace('{{AFFECTED_HIGHLIGHTS}}', highlights).replace('{{RPPS_ROWS}}', rppsRows).replaceAll('{{RPPS_SOURCE_URL}}', escape(affected.rppsSource.url)));
+writeFileSync(path.join(root, 'dist/index.html'), template.replace('{{ROWS}}', rows).replace('{{DETAILS}}', details).replace('{{EXCHANGE_URL}}', escape(data.exchange.url)).replace('{{AFFECTED_HIGHLIGHTS}}', highlights).replace('{{RPPS_ROWS}}', rppsRows).replace('{{PARTY_SUMMARY}}', partySummary).replaceAll('{{RPPS_SOURCE_URL}}', escape(affected.rppsSource.url)));
 for (const name of ['style.css','app.js']) copyFileSync(path.join(root, 'src',name), path.join(root,'dist',name));
 copyFileSync(path.join(root,'data/cases.json'), path.join(root,'dist/cases.json'));
 writeFileSync(path.join(root,'dist/affected.json'), JSON.stringify({...affected,politicalMethodology:politics.methodology,rpps:enrichedRpps},null,2)+'\n');

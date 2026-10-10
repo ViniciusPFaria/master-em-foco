@@ -34,3 +34,27 @@ controls.querySelectorAll('button').forEach(button=>button.addEventListener('cli
   document.querySelector('#chart-note').textContent = log ? 'Escala logarítmica para visualizar valores menores. Os comprimentos não mostram proporções diretas. Selecione um caso para ler seu contexto.' : 'As barras partem de zero. Valores menores podem ficar quase invisíveis. Selecione um caso para ler o recorte e as fontes.';
 }));
 selectCase('master');
+
+const rppsTools = document.querySelector('.rpps-tools');
+const rppsRows = [...document.querySelectorAll('.rpps-row')];
+const rppsSearch = document.querySelector('#rpps-search');
+const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+let rppsType = 'all';
+function filterRpps() {
+  const query = normalize(rppsSearch.value);
+  let count = 0;
+  rppsRows.forEach(row=>{
+    const visible = (rppsType === 'all' || row.dataset.type === rppsType) && normalize(row.textContent).includes(query);
+    row.hidden = !visible;
+    if (visible) count++;
+  });
+  document.querySelector('.rpps-count').textContent = `${count} de ${rppsRows.length} regimes exibidos.`;
+  document.querySelector('.rpps-empty').hidden = count !== 0;
+}
+rppsTools.hidden = false;
+rppsTools.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
+  rppsType = button.dataset.type;
+  rppsTools.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+  filterRpps();
+}));
+rppsSearch.addEventListener('input',filterRpps);

@@ -38,7 +38,13 @@ Valores nominais, sem ajuste pela inflação. Odebrecht convertida pela cotaçã
 
 O gráfico oferece escala proporcional e logarítmica, com explicação visível da diferença. Cada caso abre seu contexto e as fontes. O conteúdo e as fontes também ficam disponíveis sem JavaScript.
 
-## Desenvolvimento
+## Segunda seção: quem foi afetado
+
+Explica os limites e as exclusões da garantia ordinária do FGC, sem presumir que todo pequeno investidor tenha cobertura integral. Destaca BRB, Rioprevidência e Amprev com métricas e datas próprias: provisão para possíveis perdas, perdas apontadas em ações e aplicações nominais. As cifras não são somadas.
+
+A tabela lista os 21 RPPS do levantamento do Ministério da Previdência Social reproduzido pela Câmara (RIC 8052/2025), com busca por local ou UF e filtro estadual/municipal. A fonte não informa a data-base das posições; a data de consulta não é a data de atualização contábil. A lista não abrange todos os credores nem toda a exposição indireta ao grupo. Os dados e as fontes podem ser baixados em JSON e a tabela permanece legível sem JavaScript.
+
+## Desenvolvimento local
 
 Requer Node.js moderno. Não há dependências npm para instalar.
 
@@ -51,6 +57,7 @@ Abra `http://127.0.0.1:4173`. O build gera `dist/`, que fica fora do Git.
 
 - `src/`: estrutura, estilos e interações da página.
 - `data/cases.json`: valores, recortes, fontes e parâmetros cambiais.
+- `data/affected.json`: cobertura do FGC, recortes de instituições e 21 RPPS com fontes.
 - `scripts/build.mjs`: gera a página estática a partir dos dados.
 - `.openai/hosting.json`: identificação e configuração de hospedagem do Sites.
 
@@ -64,4 +71,4 @@ A fonte acima é um ponto de partida para a cobertura do caso. As fontes especí
 
 ## Estado do projeto
 
-Primeira seção implementada em HTML, CSS e JavaScript, com layout responsivo, fontes consultáveis e dados exportáveis. As demais seções propostas ainda serão desenvolvidas.
+Comparação de valores e seção de afetados implementadas em HTML, CSS e JavaScript, com layout responsivo, fontes consultáveis e dados exportáveis. As demais seções propostas ainda serão desenvolvidas.

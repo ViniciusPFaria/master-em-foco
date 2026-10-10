@@ -4,6 +4,7 @@ import path from 'node:path';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const data = JSON.parse(readFileSync(path.join(root, 'data/cases.json'), 'utf8'));
+const affected = JSON.parse(readFileSync(path.join(root, 'data/affected.json'), 'utf8'));
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const brl = item => item.amount * (item.currency === 'USD' ? data.exchange.rate : 1);
 const max = Math.max(...data.cases.map(brl));
@@ -28,8 +29,21 @@ const details = data.cases.map((item, i) => `
     <ul class="source-links">${item.sources.map(s=>`<li><a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.title)} <span aria-hidden="true">↗</span></a><span>${escape(s.date)}</span></li>`).join('')}</ul>
   </article>`).join('');
 const template = readFileSync(path.join(root, 'src/index.html'), 'utf8');
+const highlights = affected.highlights.map(item => `
+  <article class="affected-highlight" aria-labelledby="affected-${escape(item.id)}">
+    <p class="eyebrow">${escape(item.category)}</p>
+    <h3 id="affected-${escape(item.id)}">${escape(item.name)}</h3>
+    <p class="affected-value">${escape(item.display)}</p>
+    <p class="affected-metric">${escape(item.metric)}<span>${escape(item.date)}</span></p>
+    <p>${escape(item.description)}</p>
+    <details class="affected-context"><summary>Recorte e recuperação</summary><p>${escape(item.update)}</p></details>
+    <ul class="source-links">${item.sources.map(s=>`<li><a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.title)} ↗</a><span>${escape(s.date)}</span></li>`).join('')}</ul>
+  </article>`).join('');
+const rppsRows = affected.rpps.map(item => `
+  <tr class="rpps-row" data-type="${escape(item.type)}"><th scope="row">${escape(item.location)}</th><td>${escape(item.uf)}</td><td>${item.type === 'estadual' ? 'Estadual' : 'Municipal'}</td><td class="rpps-amount">R$ ${(item.amountBRL/1000000).toLocaleString('pt-BR')} ${item.amountBRL < 2000000 ? 'milhão' : 'milhões'}</td></tr>`).join('');
 mkdirSync(path.join(root, 'dist'), { recursive: true });
-writeFileSync(path.join(root, 'dist/index.html'), template.replace('{{ROWS}}', rows).replace('{{DETAILS}}', details).replace('{{EXCHANGE_URL}}', escape(data.exchange.url)));
+writeFileSync(path.join(root, 'dist/index.html'), template.replace('{{ROWS}}', rows).replace('{{DETAILS}}', details).replace('{{EXCHANGE_URL}}', escape(data.exchange.url)).replace('{{AFFECTED_HIGHLIGHTS}}', highlights).replace('{{RPPS_ROWS}}', rppsRows).replaceAll('{{RPPS_SOURCE_URL}}', escape(affected.rppsSource.url)));
 for (const name of ['style.css','app.js']) copyFileSync(path.join(root, 'src',name), path.join(root,'dist',name));
 copyFileSync(path.join(root,'data/cases.json'), path.join(root,'dist/cases.json'));
-console.log('Site gerado em dist/. Quatro recortes, fontes e metodologia incluídos.');
+copyFileSync(path.join(root,'data/affected.json'), path.join(root,'dist/affected.json'));
+console.log(`Site gerado em dist/. Quatro casos e ${affected.rpps.length} regimes de previdência, com fontes.`);

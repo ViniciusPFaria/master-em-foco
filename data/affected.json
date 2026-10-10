@@ -1,0 +1,90 @@
+{
+  "reviewedAt": "2026-10-10",
+  "scope": "Recortes documentados de instituições e investidores afetados; não é um cadastro completo de credores nem uma posição contábil atual.",
+  "fgc": {
+    "ordinaryLimitBRL": 250000,
+    "aggregateLimitBRL": 1000000,
+    "aggregatePeriodYears": 4,
+    "sources": [
+      {"title": "FGC — produtos e limites da garantia", "url": "https://fgc.org.br/sobre-garantia-fgc"},
+      {"title": "FGC — elegibilidade dos credores e exclusões", "url": "https://www.fgc.org.br/faq"}
+    ]
+  },
+  "highlights": [
+    {
+      "id": "brb",
+      "name": "BRB · Banco de Brasília",
+      "category": "BANCO PÚBLICO · DF",
+      "amountBRL": 8800000000,
+      "display": "R$ 8,8 bilhões",
+      "metric": "Provisão para possíveis perdas",
+      "date": "Declaração em 09/06/2026",
+      "description": "O presidente do BRB declarou ao Senado que o banco havia provisionado esse valor para possíveis perdas nos ativos ligados ao Master. Provisão é o reconhecimento de um risco de perda; não equivale ao prejuízo final após recuperações.",
+      "update": "Outro recorte: em 16/09/2026, o UOL noticiou uma estimativa de perda potencial de R$ 11,4 bilhões em relatório do Banco Central de dezembro de 2025. As duas cifras não devem ser somadas.",
+      "sources": [
+        {"title": "Senado · audiência com o presidente do BRB", "date": "09/06/2026 · fonte primária", "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/14744"},
+        {"title": "UOL · relato sobre a estimativa do BC", "date": "16/09/2026 · reportagem", "url": "https://noticias.uol.com.br/colunas/natalia-portinari/2026/09/16/relatorio-do-bc-indica-rombo-potencial-de-r-114-bi-no-brb-pos-master.htm"}
+      ]
+    },
+    {
+      "id": "rioprevidencia",
+      "name": "Rioprevidência",
+      "category": "PREVIDÊNCIA DOS SERVIDORES · RJ",
+      "amountBRL": 641400000,
+      "display": "R$ 641,4 milhões",
+      "metric": "Perdas apontadas em ações da PGE",
+      "date": "Ações de 16/07/2026",
+      "description": "Segundo reportagem do Estadão, a PGE-RJ ajuizou três ações sobre perdas nesse valor em fundos vinculados ao Grupo Master, Revolution e Texas I. O montante é o apontado nas ações; a recuperação é objeto da disputa judicial.",
+      "update": "Recorte diferente: a tabela da Câmara registra R$ 970 milhões em aplicações no Banco Master pelo RPPS do Rio. Esse valor aplicado não é o prejuízo de R$ 641,4 milhões dos fundos, nem representa toda a exposição ao grupo.",
+      "sources": [
+        {"title": "Estadão / UOL · ações da PGE-RJ", "date": "17/07/2026 · reportagem", "url": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/07/17/pge-rj-ajuiza-acoes-contra-gestoras-do-master-por-prejuizo-de-quase-r-650-mi-ao-rioprevidencia.htm"},
+        {"title": "Câmara · aplicações dos regimes de previdência", "date": "MPS · RIC 8052/2025", "url": "https://www.camara.leg.br/internet/agencia/infograficos-html5/tabelas-2026/fundos-com-aplicacao-no-banco-master.html"}
+      ]
+    },
+    {
+      "id": "amprev",
+      "name": "Amprev · Amapá Previdência",
+      "category": "PREVIDÊNCIA DOS SERVIDORES · AP",
+      "amountBRL": 400000000,
+      "display": "R$ 400 milhões",
+      "metric": "Aplicações registradas no levantamento",
+      "date": "MPS · RIC 8052/2025",
+      "description": "Esse é o valor aplicado pelo RPPS do Amapá na tabela oficial reproduzida pela Câmara. Como regime próprio de previdência, seus créditos estão fora da garantia ordinária do FGC. Valor aplicado não significa perda integral confirmada.",
+      "update": "Em 11/03/2026, a Amprev informou medidas judiciais de retenção de parcelas de consignados e projetou recompor os recursos em três a quatro anos. A projeção não comprova que o dinheiro já foi recuperado.",
+      "sources": [
+        {"title": "Câmara · aplicações dos regimes de previdência", "date": "MPS · RIC 8052/2025", "url": "https://www.camara.leg.br/internet/agencia/infograficos-html5/tabelas-2026/fundos-com-aplicacao-no-banco-master.html"},
+        {"title": "Amprev · medidas para recomposição", "date": "11/03/2026 · declaração da instituição", "url": "https://www.amprev.ap.gov.br/noticia/governo-do-amapa-e-amapa-previdencia-reforcam-medidas-de-protecao-aos-recursos-da-amprev-e-avanca-na-recomposicao-de-valores-investidos-no-banco-master"}
+      ]
+    }
+  ],
+  "rppsSource": {
+    "title": "Ministério da Previdência Social, reproduzido pela Câmara dos Deputados",
+    "reference": "RIC 8052/2025",
+    "url": "https://www.camara.leg.br/internet/agencia/infograficos-html5/tabelas-2026/fundos-com-aplicacao-no-banco-master.html",
+    "metric": "Aplicações nominais no Banco Master, em reais; não são perdas finais",
+    "note": "A tabela publicada não informa a data-base das posições. A consulta em 10/10/2026 não torna os valores uma posição atual. Inclui os 21 regimes dessa fonte; não cobre todos os credores ou toda a exposição indireta ao Grupo Master."
+  },
+  "rpps": [
+    {"location": "Rio de Janeiro", "uf": "RJ", "type": "estadual", "amountBRL": 970000000},
+    {"location": "Amapá", "uf": "AP", "type": "estadual", "amountBRL": 400000000},
+    {"location": "Amazonas", "uf": "AM", "type": "estadual", "amountBRL": 50000000},
+    {"location": "Maceió", "uf": "AL", "type": "municipal", "amountBRL": 97000000},
+    {"location": "São Roque", "uf": "SP", "type": "municipal", "amountBRL": 93200000},
+    {"location": "Cajamar", "uf": "SP", "type": "municipal", "amountBRL": 87000000},
+    {"location": "Itaguaí", "uf": "RJ", "type": "municipal", "amountBRL": 59600000},
+    {"location": "Aparecida de Goiânia", "uf": "GO", "type": "municipal", "amountBRL": 40000000},
+    {"location": "Araras", "uf": "SP", "type": "municipal", "amountBRL": 29000000},
+    {"location": "Congonhas", "uf": "MG", "type": "municipal", "amountBRL": 14000000},
+    {"location": "Brodowski", "uf": "SP", "type": "municipal", "amountBRL": 10000000},
+    {"location": "Fátima do Sul", "uf": "MS", "type": "municipal", "amountBRL": 7000000},
+    {"location": "Santo Antônio de Posse", "uf": "SP", "type": "municipal", "amountBRL": 7000000},
+    {"location": "Imbituva", "uf": "PR", "type": "municipal", "amountBRL": 4000000},
+    {"location": "São Gabriel do Oeste", "uf": "MS", "type": "municipal", "amountBRL": 3000000},
+    {"location": "Paulista", "uf": "PE", "type": "municipal", "amountBRL": 3000000},
+    {"location": "Fernão", "uf": "SP", "type": "municipal", "amountBRL": 3000000},
+    {"location": "Jateí", "uf": "MS", "type": "municipal", "amountBRL": 2500000},
+    {"location": "Angélica", "uf": "MS", "type": "municipal", "amountBRL": 2000000},
+    {"location": "Santa Rita d'Oeste", "uf": "SP", "type": "municipal", "amountBRL": 2000000},
+    {"location": "Campo Grande", "uf": "MS", "type": "municipal", "amountBRL": 1200000}
+  ]
+}

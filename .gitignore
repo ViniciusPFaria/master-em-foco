@@ -1,0 +1,19 @@
+# Dependências e arquivos gerados
+node_modules/
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Variáveis e credenciais locais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Arquivos locais
+.DS_Store
+Thumbs.db
+*.log

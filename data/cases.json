@@ -1,0 +1,80 @@
+{
+  "reviewedAt": "2026-10-10",
+  "exchange": {
+    "rate": 3.3297,
+    "date": "2016-12-21",
+    "description": "Dólar americano, venda, série SGS 1 do Banco Central. Conversão de referência na data do documento americano; não reconstitui o câmbio de cada pagamento.",
+    "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json&dataInicial=21/12/2016&dataFinal=21/12/2016"
+  },
+  "cases": [
+    {
+      "id": "master",
+      "name": "Banco Master",
+      "short": "Master",
+      "amount": 12000000000,
+      "currency": "BRL",
+      "display": "≈ R$ 12 bilhões",
+      "period": "Recorte divulgado em 2025–2026",
+      "metric": "Operações Master–BRB sob investigação",
+      "status": "Suspeita investigada",
+      "description": "Referência de cerca de R$ 12 bilhões associada à suposta fraude na venda de carteiras de crédito do Master ao Banco de Brasília (BRB). O Senado informou, em fevereiro de 2026, que esse recorte poderia ultrapassar R$ 12 bilhões.",
+      "context": "Esse número não é uma apuração do prejuízo final, do total de propinas ou de todos os desdobramentos do caso. Não inclui nem soma valores de garantias do FGC, ativos bloqueados ou outros recortes da investigação.",
+      "sources": [
+        { "title": "Senado · operações sob investigação", "date": "02/02/2026", "url": "https://www12.senado.leg.br/noticias/materias/2026/02/02/cae-instala-grupo-para-acompanhar-investigacoes-sobre-o-banco-master" },
+        { "title": "Rádio Senado · estimativa citada pelo diretor da PF", "date": "18/11/2025", "url": "https://www12.senado.leg.br/radio/1/voz-do-brasil/2025/11/18/jornal-do-senado" }
+      ]
+    },
+    {
+      "id": "odebrecht",
+      "name": "Odebrecht no Brasil",
+      "short": "Odebrecht",
+      "amount": 349000000,
+      "currency": "USD",
+      "display": "≈ R$ 1,16 bilhão",
+      "original": "US$ 349 milhões",
+      "period": "Pagamentos entre 2003 e 2016",
+      "metric": "Propinas no Brasil descritas pelo DOJ",
+      "status": "Admissão da empresa nos EUA",
+      "description": "O documento do Departamento de Justiça dos Estados Unidos (DOJ), de dezembro de 2016, descreve cerca de US$ 349 milhões em propinas feitas pela Odebrecht no Brasil entre 2003 e 2016. A empresa declarou-se culpada no acordo americano.",
+      "context": "Recorte da Odebrecht no Brasil. Exclui os valores da Braskem, os pagamentos em outros países, benefícios obtidos em contratos e multas. A admissão da empresa não implica condenação individual de cada pessoa mencionada em investigações brasileiras.",
+      "sources": [
+        { "title": "DOJ · documento do caso, § 33, página 12", "date": "21/12/2016", "url": "https://www.justice.gov/d9/press-releases/attachments/2016/12/21/odebrecht_information.pdf" },
+        { "title": "DOJ · comunicado sobre o acordo", "date": "21/12/2016", "url": "https://www.justice.gov/archives/opa/pr/odebrecht-and-braskem-plead-guilty-and-agree-pay-least-35-billion-global-penalties-resolve" }
+      ]
+    },
+    {
+      "id": "mensalao",
+      "name": "Mensalão",
+      "short": "Mensalão",
+      "amount": 55000000,
+      "currency": "BRL",
+      "display": "≈ R$ 55 milhões",
+      "period": "Julgamento da AP 470 · 2012",
+      "metric": "Recursos citados na cooptação de parlamentares",
+      "status": "Recorte do julgamento no STF",
+      "description": "Na cobertura do julgamento da Ação Penal 470, o STF registrou a análise do relator sobre cerca de R$ 55 milhões usados na cooptação de parlamentares. É esse recorte, atribuído à análise do relator, que aparece na comparação.",
+      "context": "O valor selecionado não é a soma de todas as cifras relacionadas ao Mensalão, de multas ou de danos discutidos em outras ações. A referência é o montante nominal citado no julgamento.",
+      "sources": [
+        { "title": "STF · análise do relator da AP 470", "date": "2012", "url": "https://noticias.stf.jus.br/postsnoticias/relator-da-ap-470-analisa-imputacao-de-corrupcao-passiva-a-parlamentares-do-pp/" }
+      ]
+    },
+    {
+      "id": "triplex",
+      "name": "Tríplex do Guarujá · caso Lula",
+      "short": "Tríplex",
+      "amount": 2400000,
+      "currency": "BRL",
+      "display": "> R$ 2,4 milhões",
+      "period": "Denúncia de 2016 · decisões anuladas em 2021",
+      "metric": "Benefícios alegados ligados ao imóvel",
+      "status": "Decisões anuladas",
+      "description": "A denúncia de 2016 atribuía mais de R$ 2,4 milhões a benefícios relacionados à aquisição, reforma e decoração do tríplex. O recorte exclui a alegação separada sobre armazenamento de bens. Trata-se de uma alegação histórica, e não de corrupção comprovada por uma condenação válida.",
+      "context": "O STF anulou as decisões do processo, reconhecendo a incompetência do juízo de Curitiba e a suspeição de Sergio Moro. No gráfico, R$ 2,4 milhões é apenas a referência arredondada do valor citado como superior a esse montante; não é o preço do leilão do imóvel.",
+      "sources": [
+        { "title": "Agência Brasil · valor alegado na denúncia", "date": "14/09/2016", "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2016-09/lula-comandava-esquema-de-corrupcao-identificado-na-lava-jato-diz" },
+        { "title": "STF · confirmação da anulação por incompetência", "date": "15/04/2021", "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=464261&ori=l" },
+        { "title": "STF · manutenção da suspeição e anulação", "date": "23/06/2021", "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=468086&ori=1" }
+      ]
+    }
+  ]
+}

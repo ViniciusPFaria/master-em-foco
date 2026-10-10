@@ -44,6 +44,10 @@ Explica os limites e as exclusões da garantia ordinária do FGC, sem presumir q
 
 A tabela lista os 21 RPPS do levantamento do Ministério da Previdência Social reproduzido pela Câmara (RIC 8052/2025), com busca por local ou UF e filtro estadual/municipal. A fonte não informa a data-base das posições; a data de consulta não é a data de atualização contábil. A lista não abrange todos os credores nem toda a exposição indireta ao grupo. Os dados e as fontes podem ser baixados em JSON e a tabela permanece legível sem JavaScript.
 
+Cada linha também identifica o governador ou prefeito no período documentado das aplicações ou da aprovação, com cargo, partido, referência temporal e fontes. As filiações sem confirmação na data do aporte são sinalizadas. O cargo não comprova participação na decisão de investir. Em Imbituva, são identificados o prefeito em exercício em março de 2024 e o titular. A busca aceita nomes e partidos; siglas partidárias são comparadas exatamente para evitar que “PL” corresponda à palavra “aplicações”. No celular, as linhas são apresentadas em blocos com rótulos de coluna.
+
+As notas de recuperação distinguem o resgate integral declarado pela prefeitura de Angélica da proteção judicial com liberação ainda pendente informada pela prefeitura de Campo Grande em março de 2026.
+
 ## Desenvolvimento local
 
 Requer Node.js moderno. Não há dependências npm para instalar.
@@ -58,6 +62,7 @@ Abra `http://127.0.0.1:4173`. O build gera `dist/`, que fica fora do Git.
 - `src/`: estrutura, estilos e interações da página.
 - `data/cases.json`: valores, recortes, fontes e parâmetros cambiais.
 - `data/affected.json`: cobertura do FGC, recortes de instituições e 21 RPPS com fontes.
+- `data/rpps-politics.json`: chefes do Executivo no período dos aportes, partidos, referências temporais e fontes. O build combina esses dados ao download de afetados.
 - `scripts/build.mjs`: gera a página estática a partir dos dados.
 - `.openai/hosting.json`: identificação e configuração de hospedagem do Sites.
 

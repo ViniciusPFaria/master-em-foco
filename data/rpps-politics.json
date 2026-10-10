@@ -1,0 +1,226 @@
+{
+  "reviewedAt": "2026-10-10",
+  "methodology": "Identificação do chefe do Executivo no período documentado das aplicações. O cargo não comprova autoria, aprovação ou responsabilidade pessoal pela decisão de investir. Partidos são acompanhados da referência temporal; quando a filiação na data do aporte não foi confirmada, isso é informado expressamente.",
+  "entries": [
+    {
+      "location": "Rio de Janeiro",
+      "applicationPeriod": "Novembro/2023 a julho/2024",
+      "leaders": [{"name": "Cláudio Castro", "role": "Governador", "party": "PL", "partyCodes": ["PL"], "partyReference": "Referência: 2023–2024", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "Folha · nove operações entre novembro/2023 e julho/2024", "url": "https://www1.folha.uol.com.br/mercado/2026/01/castro-faz-trocas-no-rioprevidencia-apos-fundo-virar-alvo-da-pf-por-aplicacoes-no-master.shtml"},
+        {"title": "Agência Brasil · aplicações e gestão de Castro", "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-05/pf-investiga-desvios-na-rioprevidencia-envolvendo-o-banco-master"},
+        {"title": "TSE · governador reeleito pelo PL em 2022", "url": "https://www.tse.jus.br/comunicacao/noticias/2022/Outubro/claudio-castro-pl-e-releito-governador-do-rj"}
+      ]
+    },
+    {
+      "location": "Amapá",
+      "applicationPeriod": "Julho/2024",
+      "leaders": [{"name": "Clécio Luís", "role": "Governador", "party": "Solidariedade", "partyCodes": ["Solidariedade"], "partyReference": "Antes da mudança ao União em janeiro/2026", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "Amprev · ata com a contratação em julho/2024", "url": "https://amprev.ap.gov.br/uploads/lusianeflexa%40AMPREV.LOCAL/ATAS%202025/EXTRAORDINARIA/ATA%20DA%207%C2%AA%20REUNI%C3%83O%20EXTRAORDIN%C3%81RIA.pdf"},
+        {"title": "TSE · eleição de Clécio pelo Solidariedade", "url": "https://www.tse.jus.br/comunicacao/noticias/2022/Outubro/clecio-solidariedade-e-eleito-governador-do-amapa"},
+        {"title": "Poder360 · mudança ao União somente em 30/01/2026", "url": "https://www.poder360.com.br/poder-partidos-politicos/governador-do-amapa-se-filia-ao-uniao-brasil-e-consolida-partido-no-estado/"}
+      ]
+    },
+    {
+      "location": "Amazonas",
+      "applicationPeriod": "06/06/2024",
+      "leaders": [{"name": "Wilson Lima", "role": "Governador", "party": "União Brasil", "partyCodes": ["União", "União Brasil"], "partyReference": "Mandato iniciado em 2023", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "Amazonprev · relatório com a data de compra das letras financeiras", "url": "https://www.amazonprev.am.gov.br/wp-content/uploads/2019/07/RELATORIO-JUNHO25.pdf"},
+        {"title": "TSE · reeleição de Wilson Lima pelo União", "url": "https://www.tse.jus.br/comunicacao/noticias/2022/Outubro/wilson-lima-uniao-conquista-a-reeleicao-ao-governo-do-amazonas"}
+      ]
+    },
+    {
+      "location": "Maceió",
+      "applicationPeriod": "Dezembro/2023 a maio/2024",
+      "leaders": [{"name": "João Henrique Caldas (JHC)", "role": "Prefeito", "party": "PL", "partyCodes": ["PL"], "partyReference": "Referência: 2023–2024", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "PF · aplicações em 2023 e 2024", "url": "https://www.gov.br/pf/pt-br/assuntos/noticias/2026/08/pf-investiga-aplicacao-de-recursos-previdenciarios-em-maceio-al"},
+        {"title": "Poder360 · período das aplicações na gestão de JHC", "url": "https://www.poder360.com.br/poder-justica/previdencia-de-maceio-aplicou-r-97-mi-no-master-na-gestao-de-jhc-diz-pf/"},
+        {"title": "Folha de Alagoas · JHC identificado como PL em 14/12/2023", "url": "https://folhadealagoas.com.br/2023/12/14/jhc-ja-usou-r-400-milhoes-da-primeira-parcela-paga-pela-braskem/"}
+      ]
+    },
+    {
+      "location": "São Roque",
+      "applicationPeriod": "Março a setembro/2024",
+      "leaders": [{"name": "Marcos Augusto Issa Henriques de Araújo (Guto Issa)", "role": "Prefeito", "party": "PSD", "partyCodes": ["PSD"], "partyReference": "Referência: janeiro e maio/2024", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "Câmara · resposta oficial do São Roque Prev", "url": "https://saoroque.siscam.com.br/arquivo?Id=362043"},
+        {"title": "PSD · prefeito Guto Issa em janeiro/2024", "url": "https://psd.org.br/noticias/sao-roque-sp-amplia-programa-de-wi-fi-gratuito/"},
+        {"title": "PSD · prefeito Guto Issa em maio/2024", "url": "https://psd.org.br/noticias/sao-roque-sp-lanca-o-programa-minha-casa-feliz/"}
+      ]
+    },
+    {
+      "location": "Cajamar",
+      "applicationPeriod": "Outubro/2023, dezembro/2023 e março/2024",
+      "leaders": [{"name": "Danilo Joan", "role": "Prefeito", "party": "PSD", "partyCodes": ["PSD"], "partyReference": "Referência: gestão 2023–2024", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "IPSSC / Câmara · resposta com as três aplicações", "url": "https://cmdc.sp.gov.br/arquivos/proposituras/021785204052.pdf"},
+        {"title": "IPSSC · APR com operação de 20/03/2024", "url": "https://sistema.ipssc.sp.gov.br/UpFiles/noticias/arquivos/2944/anexo_6627d12b96c1c.pdf"},
+        {"title": "PSD-SP · prefeito Danilo Joan em outubro/2023", "url": "https://psd-sp.org.br/noticias/danilo-joan-e-eleito-presidente-do-cioeste/"}
+      ]
+    },
+    {
+      "location": "Itaguaí",
+      "applicationPeriod": "28/06/2024 e 03/07/2024",
+      "leaders": [{"name": "Rubem Vieira de Souza (Dr. Rubão)", "role": "Prefeito", "party": "Podemos", "partyCodes": ["Podemos", "PODE"], "partyReference": "Referência: 2024", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "TCE-RJ · voto do Acórdão 26.458/2026, p. 1; reprodução O Bastidor", "url": "https://media.obastidor.com.br/wp-content/uploads/2026/08/06161907/Voto-condutor-do-Acordao-26458_2026.pdf"},
+        {"title": "Jornal Atual · prefeito Rubem Vieira, Podemos, em 02/08/2024", "url": "https://jornalatual.com.br/rubem-vieira-faz-convencao-partidaria-neste-sabado-3/"},
+        {"title": "TSE · nome e partido da candidatura de 2024", "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Junho/confira-a-pauta-de-julgamentos-do-tse-desta-quinta-feira-18"}
+      ]
+    },
+    {
+      "location": "Aparecida de Goiânia",
+      "applicationPeriod": "06/06/2024",
+      "leaders": [{"name": "Vilmar Mariano da Silva", "role": "Prefeito", "party": "União Brasil", "partyCodes": ["União", "União Brasil"], "partyReference": "Filiação em 04/04/2024, após saída do MDB", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "Câmara · esclarecimentos sobre o investimento de junho/2024", "url": "https://aparecidadegoiania.go.leg.br/representantes-do-aparecidaprev-prestam-esclarecimentos-sobre-aplicacao-de-r-40-milhoes-em-2024/"},
+        {"title": "AparecidaPrev · APR de junho/2024", "url": "https://aparecidaprev.go.gov.br/wp-content/uploads/2024/02/APR-06-2024.pdf"},
+        {"title": "Diário de Goiás · filiação ao União em abril/2024", "url": "https://diariodegoias.com.br/vilmar-mariano-se-filia-ao-uniao-brasil-ao-lado-de-caiado-daniel-gustavo-e-sandro/425953/"}
+      ]
+    },
+    {
+      "location": "Araras",
+      "applicationPeriod": "04/03/2024, 23/05/2024 e 09/12/2024",
+      "leaders": [{"name": "Pedro Eliseu Filho", "role": "Prefeito", "party": "PL", "partyCodes": ["PL"], "partyReference": "Já identificado como PL em dezembro/2023", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "Câmara · CEI e datas dos aportes do Araprev", "url": "https://www.camara-araras.sp.gov.br/noticias/camara-aprova-cei-para-investigar-e-acompanhar-as-acoes-do-araprev"},
+        {"title": "Câmara · prefeito Pedro Eliseu Filho identificado como PL em 2024", "url": "https://www.araras.sp.leg.br/noticias/camara-municipal-aprova-prestacao-de-contas-da-prefeitura-em-2o-turno"},
+        {"title": "RCA1 · prefeito identificado como PL em 22/12/2023", "url": "https://rca1.com.br/centro-de-operacoes-integradas-da-muralha-digital-e-inaugurado-em-araras/?amp=1"}
+      ]
+    },
+    {
+      "location": "Congonhas",
+      "applicationPeriod": "27/05/2024",
+      "leaders": [{"name": "Cláudio Antônio de Souza (Dr. Cláudio Dinho)", "role": "Prefeito", "party": "MDB / PSD", "partyCodes": ["MDB", "PSD"], "partyReference": "Fontes de maio/2024 divergem; filiação no dia do aporte não confirmada", "partyConfirmedAtInvestment": false}],
+      "note": "Notícia de 22/05/2024 identifica MDB; notícia de 27/05/2024 e cadastro eleitoral de 2024 identificam PSD. A data exata da mudança não foi confirmada. O período do aporte consta da APR 362/2024 do Prevcon, indexada no levantamento documental indicado abaixo.",
+      "sources": [
+        {"title": "APR Prevcon 362/2024 · índice com o documento original", "url": "https://novelo-master.fausel.adv.br/fontes/src-prevcon-apr-362-2024/"},
+        {"title": "Câmara · prefeito Cláudio em maio/2024", "url": "https://sapl.congonhas.mg.leg.br/sessao/140/resumo"},
+        {"title": "Correio de Minas · fonte de 22/05/2024 ainda identifica MDB", "url": "https://correiodeminas.com.br/2024/05/22/bomba-em-congonhas-mg-ex-secretario-faz-revelacao-de-suspeita-de-escandalo-no-repasse-de-mais-de-r17-milhoes-a-instituicao-ligada-ao-prefeito-vereador-pede-afastamento-e-congelamento-das-contas-d/"},
+        {"title": "Correio de Minas · prefeito identificado como PSD em 27/05/2024", "url": "https://correiodeminas.com.br/2024/05/27/clima-quente-alem-de-duas-cpis-prefeito-de-congonhas-mg-pode-enfrentar-uma-comissao-processante/"},
+        {"title": "Folha · cadastro eleitoral PSD em 2024", "url": "https://www1.folha.uol.com.br/poder/eleicoes/candidatos/2024/mg/prefeito/dr-claudio-dinho-130002063687.shtml"}
+      ]
+    },
+    {
+      "location": "Brodowski",
+      "applicationPeriod": "Maio/2024",
+      "leaders": [{"name": "José Luiz Perez (Prof. Zé Luiz)", "role": "Prefeito", "party": "PSDB", "partyCodes": ["PSDB"], "partyReference": "Eleição de 2020; filiação em maio/2024 não confirmada", "partyConfirmedAtInvestment": false}],
+      "sources": [
+        {"title": "MPC-SP · aplicação em maio/2024", "url": "https://mpc.sp.gov.br/procuradoria-do-mpc-sp-aponta-graves-riscos-em-investimentos-milionarios-feitos-por-instituto-de"},
+        {"title": "Prefeitura · documento oficial da gestão em abril/2024", "url": "https://brodowski.sp.gov.br/novo/wp-content/uploads/2024/04/PDDT_BRODOWSKI_2024_2027_15_abril_10h.pdf"},
+        {"title": "HubPolítico · dados eleitorais do TSE, PSDB na eleição de 2020", "url": "https://hubpolitico.com.br/eleicoes/2024/sp/brodowski"}
+      ]
+    },
+    {
+      "location": "Fátima do Sul",
+      "applicationPeriod": "2024; mês e dia não identificados",
+      "leaders": [{"name": "Ilda Salgado Machado", "role": "Prefeita", "party": "PSD → PP", "partyCodes": ["PSD", "PP"], "partyReference": "Mudança em março/2024; partido na data do aporte não confirmado", "partyConfirmedAtInvestment": false}],
+      "sources": [
+        {"title": "Campo Grande News · investimento durante 2024", "url": "https://www.campograndenews.com.br/cidades/interior/operacao-afasta-diretoria-de-instituto-de-ms-que-aplicou-r-7-milhoes-no-master"},
+        {"title": "MS News · comunicado municipal identifica a gestão de Ilda", "url": "https://mail.msnews.com.br/noticia/168110/prefeitura-de-fatima-do-sul-esclarece-que-investimento-do-iprefsul-no-banco-master-ocorreu-na-gestao-da-exprefeita-ilda-machado"},
+        {"title": "Correio do Estado · saída do PSD em março/2024", "url": "https://correiodoestado.com.br/politica/forte-nacionalmente-psd-definha-em-ms-com-perda-de-prefeitos-e/428088/"}
+      ]
+    },
+    {
+      "location": "Santo Antônio de Posse",
+      "applicationPeriod": "Abril/2024",
+      "leaders": [{"name": "João Leandro Lolli", "role": "Prefeito", "party": "PSD", "partyCodes": ["PSD"], "partyReference": "Eleição de 2024; filiação em abril não confirmada", "partyConfirmedAtInvestment": false}],
+      "sources": [
+        {"title": "IPREM · aplicação em abril/2024", "url": "https://ipremposse.sp.gov.br/iprem-amplia-seguranca-dos-investimentos-e-reforca-tranquilidade-aos-aposentados/"},
+        {"title": "Diário Oficial · prefeito em 19/04/2024", "url": "https://www.dosp.com.br/leituratexto?p=MTY1Nzk1Mg%3D%3D"},
+        {"title": "Folha · cadastro eleitoral PSD em 2024", "url": "https://www1.folha.uol.com.br/poder/eleicoes/candidatos/2024/sp/prefeito/joao-leandro-lolli-250002245764.shtml"}
+      ]
+    },
+    {
+      "location": "Imbituva",
+      "applicationPeriod": "Aprovação em 15/03/2024",
+      "leaders": [
+        {"name": "Zaqueu Luiz Bobato", "role": "Prefeito em exercício em março/2024", "party": "Republicanos", "partyCodes": ["Republicanos"], "partyReference": "Eleição de 2024; filiação em março não confirmada", "partyConfirmedAtInvestment": false},
+        {"name": "Celso Kubaski", "role": "Prefeito titular, afastado por 30 dias", "party": "Cidadania", "partyCodes": ["Cidadania"], "partyReference": "Eleição de 2020; filiação em março/2024 não confirmada", "partyConfirmedAtInvestment": false}
+      ],
+      "note": "Zaqueu assumiu a prefeitura em 01/03/2024 por 30 dias, período que inclui a aprovação de 15/03. A identificação do prefeito em exercício e do titular não atribui a nenhum deles a decisão do comitê de investimentos.",
+      "sources": [
+        {"title": "TCE-PR · reunião de 15/03/2024 e investimento", "url": "https://www.tce.pr.gov.br/noticias/tce-pr-apura-investimento-no-banco-master-feito-pela-previdencia-de-imbituva.htm"},
+        {"title": "Folha de Irati · substituição do prefeito por 30 dias em março/2024", "url": "https://folhadeirati.com.br/vice-prefeito-de-imbituva-zaqueu-bobato-assume-prefeitura-nesta-sexta-feira-01/"},
+        {"title": "Folha · Zaqueu, Republicanos na eleição de 2024", "url": "https://www1.folha.uol.com.br/poder/eleicoes/candidatos/2024/pr/prefeito/zaqueu-bobato-160002171158.shtml"},
+        {"title": "TCE-PR · prefeito titular Celso na gestão 2021–2024", "url": "https://www.tce.pr.gov.br/noticias/imbituva-nao-pode-contratar-novas-obras-enquanto-houver-outras-paradas-decide-tce/11858/N.htm"},
+        {"title": "HubPolítico · mandato e partido de eleição de Celso", "url": "https://hubpolitico.com.br/eleicoes/2024/pr/imbituva"}
+      ]
+    },
+    {
+      "location": "São Gabriel do Oeste",
+      "applicationPeriod": "Julho/2024",
+      "leaders": [{"name": "Jeferson Luiz Tomazoni", "role": "Prefeito", "party": "PSDB", "partyCodes": ["PSDB"], "partyReference": "Registro de autoridades de 2024", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "SGO Prev · APR de julho/2024", "url": "https://www.sgoprev.ms.gov.br/dist/uploads/files/28/autorizacao-de-aplicacao-e-resgate-apr/2024/2024-07-31-07-julho-2024-assinada-e-digitalizada.pdf"},
+        {"title": "ALMS · prefeito e partido no registro de autoridades de 2024", "url": "https://al.ms.gov.br/upload/Pdf/2024_10_22_11_37_48_lista-de-autoridades-22-10-24.pdf"}
+      ]
+    },
+    {
+      "location": "Paulista",
+      "applicationPeriod": "Fevereiro/2024",
+      "leaders": [{"name": "Yves Ribeiro", "role": "Prefeito", "party": "PT", "partyCodes": ["PT"], "partyReference": "Filiação em novembro/2023, após saída do MDB", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "PreviPaulista · nota oficial identifica fevereiro/2024 e a gestão", "url": "https://previpaulista.pe.gov.br/nota-oficial-previpaulista/"},
+        {"title": "Diario de Pernambuco · filiação ao PT em novembro/2023", "url": "https://www.diariodepernambuco.com.br/noticia/politica/2023/11/prefeito-de-paulista-yves-ribeiro-se-filia-ao-pt.html"}
+      ]
+    },
+    {
+      "location": "Fernão",
+      "applicationPeriod": "19/07/2024",
+      "leaders": [{"name": "José Valentim Fodra", "role": "Prefeito", "party": "PSD", "partyCodes": ["PSD"], "partyReference": "Galeria oficial da gestão 2021–2024 e eleição de 2024", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "MPC-SP · representação com a aplicação de 19/07/2024", "url": "https://mpc.sp.gov.br/sites/mpcsp/files/noticias/Rep%20MPC.%20RPPS%20Fern%C3%A3o%20002856.989.25-6%20Banco%20Master.pdf"},
+        {"title": "Prefeitura · galeria da gestão 2021–2024", "url": "https://www.fernao.sp.gov.br/prefeitura/detalhe-prefeito/1/"},
+        {"title": "Folha · cadastro eleitoral PSD em 2024", "url": "https://www1.folha.uol.com.br/poder/eleicoes/candidatos/2024/sp/prefeito/ze-fodra-250002136655.shtml"}
+      ]
+    },
+    {
+      "location": "Jateí",
+      "applicationPeriod": "2024; mês e dia não identificados",
+      "leaders": [{"name": "Eraldo Jorge Leite", "role": "Prefeito", "party": "PSDB", "partyCodes": ["PSDB"], "partyReference": "Registro de autoridades de 2024", "partyConfirmedAtInvestment": true}],
+      "sources": [
+        {"title": "Rede News MS · ano da aplicação", "url": "https://redenewsms.com/noticia/76350-campo-grande-e-mais-3-cidades-aplicaram-recursos-da-previdencia-em-banco-liquidado-pelo-bc"},
+        {"title": "ALMS · prefeito e partido no registro de autoridades de 2024, p. 65", "url": "https://al.ms.gov.br/upload/Pdf/2024_10_22_11_37_48_lista-de-autoridades-22-10-24.pdf"}
+      ]
+    },
+    {
+      "location": "Angélica",
+      "applicationPeriod": "18/07/2024",
+      "leaders": [{"name": "Edison Cassuci Ferreira (Edinho Cassuci)", "role": "Prefeito", "party": "PSDB", "partyCodes": ["PSDB"], "partyReference": "Filiação em setembro/2023; registro de autoridades de 2024", "partyConfirmedAtInvestment": true}],
+      "recoveryNote": "Prefeitura declarou resgate integral em 12/11/2025, antes da liquidação.",
+      "note": "O resgate integral, sem prejuízo, foi informado pela prefeitura em nota reproduzida pela imprensa. O valor da tabela é a aplicação histórica.",
+      "sources": [
+        {"title": "IPA · APR 44/2024, aplicação de 18/07/2024, p. 18", "url": "https://www.ipa.ms.gov.br/dist/uploads/files/6/apr/2024/julho-2024-apr-s-de-julho-de-2024-assinadas.pdf"},
+        {"title": "IPA · portaria do prefeito em 10/07/2024", "url": "https://www.ipa.ms.gov.br/dist/uploads/files/6/legislacao/portaria/2024/356.pdf"},
+        {"title": "ALMS · prefeito e partido no registro de autoridades de 2024", "url": "https://al.ms.gov.br/upload/Pdf/2024_10_22_11_37_48_lista-de-autoridades-22-10-24.pdf"},
+        {"title": "Midiamax · nota da prefeitura sobre resgate integral", "url": "https://midiamax.com.br/politica/transparencia/2025/prefeitura-angelica-diz-resgatou-r-2-milhoes-master-semana-antes-prisao-dono-pf/"}
+      ]
+    },
+    {
+      "location": "Santa Rita d'Oeste",
+      "applicationPeriod": "2024, antes de outubro; dias não identificados",
+      "leaders": [{"name": "Osmar Sampaio (Osmarzinho da Oficina)", "role": "Prefeito", "party": "PL", "partyCodes": ["PL"], "partyReference": "Registro de julho/2024; filiação no dia de cada aporte não confirmada", "partyConfirmedAtInvestment": false}],
+      "sources": [
+        {"title": "MPC-SP · representações, Santa Rita d'Oeste nas pp. 25–28", "url": "https://www.mpc.sp.gov.br/sites/mpcsp/files/noticias/Representa%C3%A7%C3%B5es%20RPPS%20Banco%20Master%20e%20Texas.pdf"},
+        {"title": "Poder360 · aplicações e prefeito da gestão de 2024", "url": "https://www.poder360.com.br/poder-economia/5-municipios-paulistas-investiram-r-218-milhoes-no-banco-master/"},
+        {"title": "Informa Mais · prefeito identificado como PL em 18/07/2024", "url": "https://www.informamais.com.br/Site/Paginas/Osmarzinho-PL-e-Joao-Lujan-Podemos-sao-pre-candidatos-a-reeleicao-em-Santa-Rita-dOeste--/8689"}
+      ]
+    },
+    {
+      "location": "Campo Grande",
+      "applicationPeriod": "Abril/2024, segundo o diretor do IMPCG",
+      "leaders": [{"name": "Adriane Barbosa Nogueira Lopes (Adriane Lopes)", "role": "Prefeita", "party": "PP", "partyCodes": ["PP"], "partyReference": "Registro de autoridades de 2024", "partyConfirmedAtInvestment": true}],
+      "recoveryNote": "Em 11/03/2026, prefeitura informou recursos protegidos judicialmente, ainda aguardando liberação definitiva.",
+      "note": "O comunicado de 11/03/2026 relata retenção judicial de recursos de consignados para assegurar devolução. Não é confirmação de que a liberação definitiva ao instituto já ocorreu.",
+      "sources": [
+        {"title": "Campo Grande News · diretor informa aplicação em abril/2024", "url": "https://www.campograndenews.com.br/cidades/capital/apos-liquidacao-do-banco-master-impcg-tentara-reaver-r-1-4-milhao-na-justica"},
+        {"title": "ALMS · prefeita e partido no registro de autoridades de 2024, p. 56", "url": "https://al.ms.gov.br/upload/Pdf/2024_10_22_11_37_48_lista-de-autoridades-22-10-24.pdf"},
+        {"title": "Prefeitura · retenção judicial e liberação ainda pendente em 11/03/2026", "url": "https://www.campogrande.ms.gov.br/cgnoticias/noticia/impcg-assegura-recuperacao-de-r-12-mi-investidos-no-banco-master/"}
+      ]
+    }
+  ]
+}

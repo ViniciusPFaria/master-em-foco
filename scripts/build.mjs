@@ -5,6 +5,14 @@ import path from 'node:path';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const data = JSON.parse(readFileSync(path.join(root, 'data/cases.json'), 'utf8'));
 const affected = JSON.parse(readFileSync(path.join(root, 'data/affected.json'), 'utf8'));
+const politics = JSON.parse(readFileSync(path.join(root, 'data/rpps-politics.json'), 'utf8'));
+const politicalByLocation = new Map(politics.entries.map(item => [item.location, item]));
+if (politicalByLocation.size !== politics.entries.length) throw new Error('Localidade política duplicada.');
+const enrichedRpps = affected.rpps.map(item => {
+  const politicalContext = politicalByLocation.get(item.location);
+  if (!politicalContext?.leaders.length || !politicalContext.sources.length) throw new Error(`Contexto político sem nomes ou fontes: ${item.location}`);
+  return {...item, politicalContext};
+});
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const brl = item => item.amount * (item.currency === 'USD' ? data.exchange.rate : 1);
 const max = Math.max(...data.cases.map(brl));
@@ -39,11 +47,32 @@ const highlights = affected.highlights.map(item => `
     <details class="affected-context"><summary>Recorte e recuperação</summary><p>${escape(item.update)}</p></details>
     <ul class="source-links">${item.sources.map(s=>`<li><a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.title)} ↗</a><span>${escape(s.date)}</span></li>`).join('')}</ul>
   </article>`).join('');
-const rppsRows = affected.rpps.map(item => `
-  <tr class="rpps-row" data-type="${escape(item.type)}"><th scope="row">${escape(item.location)}</th><td>${escape(item.uf)}</td><td>${item.type === 'estadual' ? 'Estadual' : 'Municipal'}</td><td class="rpps-amount">R$ ${(item.amountBRL/1000000).toLocaleString('pt-BR')} ${item.amountBRL < 2000000 ? 'milhão' : 'milhões'}</td></tr>`).join('');
+const rppsRows = enrichedRpps.map(item => {
+  const context = item.politicalContext;
+  const search = [item.location,item.uf,item.type,...context.leaders.flatMap(leader=>[leader.name,leader.role,...leader.partyCodes])].join(' ');
+  const parties = [...new Set(context.leaders.flatMap(leader=>leader.partyCodes))];
+  return `
+  <tr class="rpps-row" role="row" data-type="${escape(item.type)}" data-search="${escape(search)}" data-parties="${escape(JSON.stringify(parties))}">
+    <th scope="row" role="rowheader">${escape(item.location)}${context.recoveryNote ? `<span class="rpps-recovery">${escape(context.recoveryNote)}</span>` : ''}</th>
+    <td role="cell" data-label="UF">${escape(item.uf)}</td>
+    <td role="cell" data-label="Tipo">${item.type === 'estadual' ? 'Estadual' : 'Municipal'}</td>
+    <td role="cell" class="rpps-leadership" data-label="Chefe do Executivo na época">
+      ${context.leaders.map(leader=>`<div class="rpps-person"><strong>${escape(leader.name)}</strong><span>${escape(leader.role)}</span></div>`).join('')}
+      <p class="rpps-period">${escape(context.applicationPeriod)}</p>
+      <details class="rpps-political-sources"><summary>Fontes e datas<span class="sr-only"> · ${escape(item.location)}</span></summary>
+        ${context.note ? `<p>${escape(context.note)}</p>` : ''}
+        <ul>${context.sources.map(source=>`<li><a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.title)} ↗</a></li>`).join('')}</ul>
+      </details>
+    </td>
+    <td role="cell" class="rpps-party" data-label="Partido e referência">
+      ${context.leaders.map(leader=>`<div class="rpps-party-entry"><strong>${escape(leader.party)}</strong>${context.leaders.length > 1 ? `<span>${escape(leader.name)}</span>` : ''}<span class="${leader.partyConfirmedAtInvestment ? '' : 'rpps-uncertain'}">${escape(leader.partyReference)}</span></div>`).join('')}
+    </td>
+    <td role="cell" class="rpps-amount" data-label="Valor aplicado">R$ ${(item.amountBRL/1000000).toLocaleString('pt-BR')} ${item.amountBRL < 2000000 ? 'milhão' : 'milhões'}</td>
+  </tr>`;
+}).join('');
 mkdirSync(path.join(root, 'dist'), { recursive: true });
 writeFileSync(path.join(root, 'dist/index.html'), template.replace('{{ROWS}}', rows).replace('{{DETAILS}}', details).replace('{{EXCHANGE_URL}}', escape(data.exchange.url)).replace('{{AFFECTED_HIGHLIGHTS}}', highlights).replace('{{RPPS_ROWS}}', rppsRows).replaceAll('{{RPPS_SOURCE_URL}}', escape(affected.rppsSource.url)));
 for (const name of ['style.css','app.js']) copyFileSync(path.join(root, 'src',name), path.join(root,'dist',name));
 copyFileSync(path.join(root,'data/cases.json'), path.join(root,'dist/cases.json'));
-copyFileSync(path.join(root,'data/affected.json'), path.join(root,'dist/affected.json'));
+writeFileSync(path.join(root,'dist/affected.json'), JSON.stringify({...affected,politicalMethodology:politics.methodology,rpps:enrichedRpps},null,2)+'\n');
 console.log(`Site gerado em dist/. Quatro casos e ${affected.rpps.length} regimes de previdência, com fontes.`);

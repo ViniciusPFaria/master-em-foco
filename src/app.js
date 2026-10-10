@@ -39,12 +39,14 @@ const rppsTools = document.querySelector('.rpps-tools');
 const rppsRows = [...document.querySelectorAll('.rpps-row')];
 const rppsSearch = document.querySelector('#rpps-search');
 const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+const partyQueries = new Set(rppsRows.flatMap(row=>JSON.parse(row.dataset.parties).map(normalize)));
 let rppsType = 'all';
 function filterRpps() {
   const query = normalize(rppsSearch.value);
   let count = 0;
   rppsRows.forEach(row=>{
-    const visible = (rppsType === 'all' || row.dataset.type === rppsType) && normalize(row.textContent).includes(query);
+    const matchesQuery = partyQueries.has(query) ? JSON.parse(row.dataset.parties).some(party=>normalize(party)===query) : normalize(row.dataset.search).includes(query);
+    const visible = (rppsType === 'all' || row.dataset.type === rppsType) && matchesQuery;
     row.hidden = !visible;
     if (visible) count++;
   });

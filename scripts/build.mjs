@@ -6,6 +6,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const data = JSON.parse(readFileSync(path.join(root, 'data/cases.json'), 'utf8'));
 const affected = JSON.parse(readFileSync(path.join(root, 'data/affected.json'), 'utf8'));
 const politics = JSON.parse(readFileSync(path.join(root, 'data/rpps-politics.json'), 'utf8'));
+const elections = JSON.parse(readFileSync(path.join(root, 'data/elections.json'), 'utf8'));
 const politicalByLocation = new Map(politics.entries.map(item => [item.location, item]));
 if (politicalByLocation.size !== politics.entries.length) throw new Error('Localidade política duplicada.');
 const enrichedRpps = affected.rpps.map(item => {
@@ -83,9 +84,26 @@ enrichedRpps.forEach(item=>{
 const partyTotals = [...partyCounts].sort((a,b)=>b[1]-a[1] || a[0].localeCompare(b[0],'pt-BR'));
 if (unconfirmed) partyTotals.push(['Não confirmado',unconfirmed]);
 const partySummary = partyTotals.map(([party,count])=>`<li class="party-tally${party === 'Não confirmado' ? ' party-tally-uncertain' : ''}"><span>${escape(party)}</span><strong>${count}</strong></li>`).join('');
+const electionCategories = [['all','Todos'],['reeleito','Reeleitos'],['novo-cargo','Novos mandatos'],['nao-eleito','Não eleitos'],['segundo-turno','Segundo turno'],['outros','Outros registros']];
+if (new Set(elections.entries.map(item=>item.id)).size !== elections.entries.length) throw new Error('Nome eleitoral duplicado.');
+for (const item of elections.entries) {
+  if (!item.sources.some(source=>source.kind === 'investigation') || !electionCategories.some(([key])=>key === item.category)) throw new Error(`Registro eleitoral incompleto: ${item.name}`);
+  if (item.category !== 'outros' && !item.sources.some(source=>source.kind === 'election')) throw new Error(`Resultado sem fonte: ${item.name}`);
+}
+const electionFilters = electionCategories.map(([key,label])=>`<button type="button" data-result="${key}" aria-pressed="${key === 'all'}">${escape(label)} · ${key === 'all' ? elections.entries.length : elections.entries.filter(item=>item.category === key).length}</button>`).join('');
+const electionTotals = electionCategories.slice(1,5).map(([key,label])=>`<div><strong>${elections.entries.filter(item=>item.category === key).length}</strong><span>${escape(label)}</span></div>`).join('');
+const electionRows = elections.entries.map(item=>`<tr class="election-row" role="row" data-result="${escape(item.category)}">
+  <th scope="row" role="rowheader"><strong>${escape(item.name)}</strong><span>${escape(item.role)} · ${escape(item.uf)}</span><details class="election-sources"><summary>Fontes e contexto<span class="sr-only"> · ${escape(item.name)}</span></summary><p>${escape(item.position)}</p><ul>${item.sources.map(source=>`<li><a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.title)} ↗</a><span>${escape(source.date)}</span></li>`).join('')}</ul></details></th>
+  <td role="cell" data-label="Partido / referência">${escape(item.party)}</td>
+  <td role="cell" data-label="Disputa em 2026">${escape(item.contest)}</td>
+  <td role="cell" data-label="Resultado"><strong class="election-badge election-${escape(item.category)}">${escape(item.result)}</strong><p>${escape(item.resultNote)}</p></td>
+  <td role="cell" data-label="Investigação documentada">${escape(item.investigation)}</td>
+</tr>`).join('');
+const electionReview = elections.reviewNotes.map(item=>`<li><strong>${escape(item.name)}</strong><p>${escape(item.note)}</p>${item.sources.map(source=>`<a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.title)} ↗</a>`).join('')}</li>`).join('');
 mkdirSync(path.join(root, 'dist'), { recursive: true });
-writeFileSync(path.join(root, 'dist/index.html'), template.replace('{{ROWS}}', rows).replace('{{DETAILS}}', details).replace('{{EXCHANGE_URL}}', escape(data.exchange.url)).replace('{{AFFECTED_HIGHLIGHTS}}', highlights).replace('{{RPPS_ROWS}}', rppsRows).replace('{{PARTY_SUMMARY}}', partySummary).replaceAll('{{RPPS_SOURCE_URL}}', escape(affected.rppsSource.url)));
+writeFileSync(path.join(root, 'dist/index.html'), template.replace('{{ROWS}}', rows).replace('{{DETAILS}}', details).replace('{{EXCHANGE_URL}}', escape(data.exchange.url)).replace('{{AFFECTED_HIGHLIGHTS}}', highlights).replace('{{RPPS_ROWS}}', rppsRows).replace('{{PARTY_SUMMARY}}', partySummary).replaceAll('{{RPPS_SOURCE_URL}}', escape(affected.rppsSource.url)).replace('{{ELECTION_TOTALS}}',electionTotals).replace('{{ELECTION_FILTERS}}',electionFilters).replace('{{ELECTION_ROWS}}',electionRows).replace('{{ELECTION_REVIEW}}',electionReview).replace('{{ELECTION_SCOPE}}',escape(elections.scope)).replace('{{ELECTION_METHOD}}',escape(elections.methodology)));
 for (const name of ['style.css','app.js']) copyFileSync(path.join(root, 'src',name), path.join(root,'dist',name));
 copyFileSync(path.join(root,'data/cases.json'), path.join(root,'dist/cases.json'));
+copyFileSync(path.join(root,'data/elections.json'), path.join(root,'dist/elections.json'));
 writeFileSync(path.join(root,'dist/affected.json'), JSON.stringify({...affected,politicalMethodology:politics.methodology,rpps:enrichedRpps},null,2)+'\n');
 console.log(`Site gerado em dist/. Quatro casos e ${affected.rpps.length} regimes de previdência, com fontes.`);

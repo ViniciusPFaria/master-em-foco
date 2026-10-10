@@ -1,0 +1,114 @@
+{
+  "reviewedAt": "2026-10-10",
+  "electionYear": 2026,
+  "scope": "Políticos com investigação individual ligada ao Master ou ao financiamento de Dark Horse documentada nas fontes consultadas. Inclui confirmação oficial e reportagem que identifica procedimento ou medida judicial. Não é um cadastro exaustivo de investigados: há procedimentos sigilosos e pessoas sem atuação eleitoral.",
+  "methodology": "Investigação não significa denúncia, condenação ou culpa. Reeleição exige vitória para o mesmo cargo; primeiro mandato ou mudança de cargo são classificados separadamente. Resultados eleitorais priorizam Justiça Eleitoral e Senado. A ausência de resultado confirmado não é tratada como derrota ou ausência de candidatura. Partidos referem-se à eleição de 2026 ou à data expressamente indicada.",
+  "entries": [
+    {
+      "id": "jaques-wagner", "name": "Jaques Wagner", "party": "PT", "uf": "BA", "role": "Senador", "contest": "Senador · BA", "category": "reeleito", "result": "Reeleito", "resultNote": "Renovou o mandato de senador no primeiro turno.",
+      "investigation": "Alvo da 9ª fase da Compliance Zero. O STF informou que a PF apura relações entre o senador e gestores do Master.",
+      "position": "A defesa nega recebimento de vantagens econômicas indevidas.",
+      "sources": [
+        {"kind": "investigation", "title": "STF · 9ª fase da Compliance Zero", "date": "18/06/2026", "url": "https://noticias.stf.jus.br/postsnoticias/stf-autoriza-9a-fase-da-operacao-compliance-zero-em-sp-ba-e-df/"},
+        {"kind": "election", "title": "Senado · reeleição de Jaques Wagner", "date": "04/10/2026", "url": "https://www12.senado.leg.br/noticias/materias/2026/10/04/bahia-escolhe-rui-costa-e-jaques-wagner-para-o-senado"},
+        {"kind": "context", "title": "Folha · manifestação da defesa", "date": "04/10/2026", "url": "https://www1.folha.uol.com.br/poder/2026/10/politicos-envolvidos-no-caso-master-driblam-escandalo-e-conseguem-se-eleger.shtml"}
+      ]
+    },
+    {
+      "id": "mario-frias", "name": "Mario Frias", "party": "PL", "uf": "SP", "role": "Deputado federal", "contest": "Deputado federal · SP", "category": "reeleito", "result": "Reeleito", "resultNote": "Eleito por quociente partidário, conforme a lista do TRE-SP.",
+      "investigation": "Alvo da Operação Make Up, sobre possível desvio de emendas para Dark Horse. É uma frente distinta da apuração de pagamentos de Vorcaro ao filme.",
+      "position": "Frias contestou a operação e nega irregularidades.",
+      "sources": [
+        {"kind": "investigation", "title": "STF · operação sobre emendas e Dark Horse", "date": "10/09/2026", "url": "https://noticias.stf.jus.br/postsnoticias/stf-autoriza-operacao-da-pf-sobre-destinacao-de-emendas-parlamentares-no-caso-dark-horse/"},
+        {"kind": "election", "title": "TRE-SP · lista de deputados federais eleitos", "date": "06/10/2026", "url": "https://www.tre-sp.jus.br/comunicacao/noticias/2026/Outubro/eleicoes-2026-veja-as-deputadas-e-os-deputados-federais-eleitos-por-sao-paulo"},
+        {"kind": "context", "title": "Folha · resposta de Mario Frias", "date": "10/09/2026", "url": "https://www1.folha.uol.com.br/poder/2026/09/mario-frias-chama-operacao-da-pf-de-cortina-de-fumaca-em-ano-de-eleicao.shtml"}
+      ]
+    },
+    {
+      "id": "mauro-mendes", "name": "Mauro Mendes", "party": "União Brasil", "uf": "MT", "role": "Ex-governador", "contest": "Senador · MT", "category": "novo-cargo", "result": "Eleito para outro cargo", "resultNote": "Ex-governador eleito para seu primeiro mandato no Senado.",
+      "investigation": "Metrópoles confirmou apuração sigilosa no STJ, a pedido da PGR, sobre possível favorecimento ao Master no credenciamento do Credcesta.",
+      "position": "Mendes afirma que o credenciamento seguiu a legalidade e nega favorecimento.",
+      "sources": [
+        {"kind": "investigation", "title": "Metrópoles · apuração no STJ e resposta de Mendes", "date": "24/06/2026", "url": "https://www.metropoles.com/brasil/stj-investiga-suposto-favorecimento-de-ex-governador-de-mt-ao-master"},
+        {"kind": "election", "title": "TRE-MT · proclamação dos resultados", "date": "05/10/2026", "url": "https://www.tre-mt.jus.br/comunicacao/noticias/2026/Outubro/tre-mt-conclui-apuracao-das-eleicoes-gerais-de-2026-e-comemora-tranquilidade"}
+      ]
+    },
+    {
+      "id": "antonio-rueda", "name": "Antônio Rueda", "party": "União Brasil", "uf": "RJ", "role": "Presidente do União Brasil", "contest": "Deputado federal · RJ", "category": "novo-cargo", "result": "Eleito para primeiro mandato", "resultNote": "Conquistou sua primeira cadeira na Câmara dos Deputados.",
+      "investigation": "Reportagem do UOL relata decisão de Mendonça que confirma apuração sigilosa de Rueda, separada da investigação de ACM Neto.",
+      "position": "Rueda afirma que os serviços de advocacia prestados ao Master foram regulares.",
+      "sources": [
+        {"kind": "investigation", "title": "UOL · decisão sobre investigação sigilosa de Rueda", "date": "08/09/2026", "url": "https://noticias.uol.com.br/colunas/leticia-casado/2026/09/08/mendonca-diz-que-moraes-atrapalhou-investigacao-sigilosa-de-rueda.htm"},
+        {"kind": "election", "title": "Congresso em Foco · primeira eleição de Rueda", "date": "04/10/2026", "url": "https://www.congressoemfoco.com.br/noticia/122975/presidente-do-uniao-antonio-de-rueda-e-eleito-deputado-federal"},
+        {"kind": "context", "title": "Folha · resposta de Rueda", "date": "04/10/2026", "url": "https://www1.folha.uol.com.br/poder/2026/10/politicos-envolvidos-no-caso-master-driblam-escandalo-e-conseguem-se-eleger.shtml"}
+      ]
+    },
+    {
+      "id": "ciro-nogueira", "name": "Ciro Nogueira", "party": "PP", "uf": "PI", "role": "Senador", "contest": "Senador · PI", "category": "nao-eleito", "result": "Não reeleito", "resultNote": "Não conquistou uma das duas vagas do Piauí no Senado.",
+      "investigation": "Alvo da 5ª fase da Compliance Zero. O STF informou apuração de suposta atuação parlamentar em favor de Vorcaro em troca de vantagens indevidas.",
+      "position": "O senador nega conduta inadequada relacionada ao caso.",
+      "sources": [
+        {"kind": "investigation", "title": "STF · fase da operação envolvendo Ciro Nogueira", "date": "07/05/2026", "url": "https://noticias.stf.jus.br/postsnoticias/stf-autoriza-nova-fase-da-operacao-compliance-zero/"},
+        {"kind": "election", "title": "CNN · Ciro Nogueira não se reelege", "date": "04/10/2026", "url": "https://www.cnnbrasil.com.br/eleicoes/ciro-nogueira-nao-se-reelege-e-deixara-senado-apos-16-anos/"},
+        {"kind": "context", "title": "Senado · eleitos no Piauí", "date": "04/10/2026", "url": "https://www12.senado.leg.br/noticias/materias/2026/10/04/piaui-elege-marcelo-castro-e-julio-cesar-para-o-senado"},
+        {"kind": "context", "title": "Folha · posição de Ciro Nogueira", "date": "04/10/2026", "url": "https://www1.folha.uol.com.br/poder/2026/10/politicos-envolvidos-no-caso-master-driblam-escandalo-e-conseguem-se-eleger.shtml"}
+      ]
+    },
+    {
+      "id": "acm-neto", "name": "ACM Neto", "party": "União Brasil", "uf": "BA", "role": "Ex-prefeito de Salvador", "contest": "Governador · BA", "category": "nao-eleito", "result": "Não eleito", "resultNote": "Perdeu no primeiro turno; Jerônimo Rodrigues foi reeleito.",
+      "investigation": "Segundo documento de Mendonça relatado pelo BNews, teve sigilos quebrados nas Petições 16.400 e 16.461 da Compliance Zero. As medidas não equivalem a acusação formal.",
+      "position": "ACM Neto afirma que sua consultoria ao Master não envolveu irregularidades.",
+      "sources": [
+        {"kind": "investigation", "title": "BNews · medidas judiciais e petições de ACM Neto", "date": "22/09/2026", "url": "https://www.bnews.com.br/noticias/politica/andre-mendonca-revela-autorizacao-para-quebra-de-sigilos-telefonicos-e-bancarios-de-acm-neto.html"},
+        {"kind": "election", "title": "TRE-BA · governador eleito no primeiro turno", "date": "06/10/2026", "url": "https://www.tre-ba.jus.br/comunicacao/noticias/2026/Outubro/eleitores-as-da-bahia-definem-governador-no-primeiro-turno-das-eleicoes-gerais-de-2026"},
+        {"kind": "context", "title": "Folha · resultado e posição de ACM Neto", "date": "04/10/2026", "url": "https://www1.folha.uol.com.br/poder/2026/10/politicos-envolvidos-no-caso-master-driblam-escandalo-e-conseguem-se-eleger.shtml"}
+      ]
+    },
+    {
+      "id": "flavio-bolsonaro", "name": "Flávio Bolsonaro", "party": "PL", "uf": "RJ", "role": "Senador", "contest": "Presidente da República", "category": "segundo-turno", "result": "Disputa o segundo turno", "resultNote": "Resultado presidencial pendente. Segundo turno em 25/10/2026. Seria eleição para outro cargo.",
+      "investigation": "Investigado no STF sobre o financiamento de Dark Horse com recursos ligados a Vorcaro. Reportagens identificam inquérito aberto em julho.",
+      "position": "Flávio nega irregularidades e afirma que o financiamento era um acordo privado.",
+      "sources": [
+        {"kind": "investigation", "title": "Folha · investigação formal de Flávio Bolsonaro", "date": "11/09/2026", "url": "https://www1.folha.uol.com.br/poder/2026/09/flavio-bolsonaro-e-investigado-no-stf-em-inquerito-sobre-dark-horse.shtml"},
+        {"kind": "election", "title": "TSE · candidatos ao segundo turno presidencial", "date": "04/10/2026", "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/flavio-bolsonaro-e-lula-vao-disputar-o-2o-turno-para-a-presidencia-da-republica"},
+        {"kind": "context", "title": "Folha · posição de Flávio Bolsonaro", "date": "04/10/2026", "url": "https://www1.folha.uol.com.br/poder/2026/10/politicos-envolvidos-no-caso-master-driblam-escandalo-e-conseguem-se-eleger.shtml"}
+      ]
+    },
+    {
+      "id": "claudio-castro", "name": "Cláudio Castro", "party": "PL", "uf": "RJ", "role": "Ex-governador", "contest": "Desistiu da pré-candidatura ao Senado", "category": "outros", "result": "Desistiu da disputa", "resultNote": "Desistência anunciada em maio. Não é uma derrota na votação de outubro.",
+      "investigation": "Alvo de busca autorizada pelo STF na apuração sobre recursos do Rioprevidência aplicados em estruturas ligadas ao Master.",
+      "position": "A classificação registra a medida investigativa, sem atribuir culpa.",
+      "sources": [
+        {"kind": "investigation", "title": "STF · busca na casa de Cláudio Castro", "date": "26/05/2026", "url": "https://noticias.stf.jus.br/postsnoticias/caso-master-stf-autoriza-busca-e-apreensao-na-casa-do-ex-governador-do-rj/"},
+        {"kind": "election", "title": "Folha · desistência de Castro", "date": "28/05/2026", "url": "https://www1.folha.uol.com.br/poder/2026/05/castro-comunica-ao-pl-desistencia-de-pre-candidatura-ao-senado-apos-ser-alvo-de-operacoes-da-pf.shtml"}
+      ]
+    },
+    {
+      "id": "eduardo-bolsonaro", "name": "Eduardo Bolsonaro", "party": "PL", "uf": "SP", "role": "Ex-deputado federal", "contest": "Desistiu da pretendida suplência no Senado", "category": "outros", "result": "Desistiu da disputa", "resultNote": "Abandonou a pretendida suplência de André do Prado em julho.",
+      "investigation": "UOL e Agência Brasil registram sua inclusão na apuração do financiamento de Dark Horse, junto de Flávio Bolsonaro.",
+      "position": "A classificação registra a existência da apuração, sem atribuir culpa.",
+      "sources": [
+        {"kind": "investigation", "title": "UOL · investigação de Flávio e Eduardo no STF", "date": "11/09/2026", "url": "https://noticias.uol.com.br/politica/ultimas-noticias/2026/09/11/mendonca-inclui-flavio-em-inquerito-mas-mantem-caso-dark-horse-sob-sigilo.ghtm"},
+        {"kind": "context", "title": "Agência Brasil · apuração também envolve Eduardo", "date": "11/09/2026", "url": "https://agenciabrasil.ebc.com.br/es/justica/noticia/2026-09/el-candidato-flavio-bolsonaro-sera-investigado-en-el-caso-dark-horse"},
+        {"kind": "election", "title": "Poder360 · desistência da suplência", "date": "30/07/2026", "url": "https://www.poder360.com.br/poder-eleicoes-2026/eduardo-bolsonaro-desiste-de-vaga-como-suplente-de-andre-do-prado/"}
+      ]
+    },
+    {
+      "id": "camilla-nascimento", "name": "Camilla Nascimento", "party": "Sem partido · referência de agosto/2026", "uf": "MS", "role": "Vice-prefeita de Campo Grande", "contest": "Resultado de candidatura em 2026 não verificado", "category": "outros", "result": "Resultado 2026 não confirmado", "resultNote": "Seu cargo é municipal. Não incluída nas contagens de eleitos ou derrotados em 2026.",
+      "investigation": "Alvo de busca na Operação Presciência, sobre a aplicação do IMPCG no Master. A PF anunciou a operação; Metrópoles identificou a vice-prefeita como alvo.",
+      "position": "A prefeitura afirma que os investimentos seguiram as normas e que presta esclarecimentos à investigação.",
+      "sources": [
+        {"kind": "investigation", "title": "PF · Operação Presciência em Campo Grande", "date": "25/08/2026", "url": "https://www.gov.br/pf/pt-br/assuntos/noticias/2026/08/pf-apura-irregularidades-na-aplicacao-de-recursos-previdenciarios-de-campo-grande-ms"},
+        {"kind": "context", "title": "Metrópoles · identificação da alvo e nota da prefeitura", "date": "25/08/2026", "url": "https://www.metropoles.com/colunas/mirelle-pinheiro/master-vice-prefeita-e-alvo-da-pf-em-acao-que-mira-previdencia-no-ms"},
+        {"kind": "context", "title": "O Jacaré · filiação na data da operação", "date": "25/08/2026", "url": "https://www.ojacare.com.br/2026/08/25/pf-mira-vice-prefeita-da-capital-em-apuracao-sobre-aplicacao-de-r-12-mi-no-master/"}
+      ]
+    }
+  ],
+  "reviewNotes": [
+    {"name": "Ibaneis Rocha", "note": "O procedimento remetido à PGR e sua condição perante uma CPI não bastam para confirmar abertura de inquérito criminal individual. Não incluído nos totais desta lista.", "sources": [{"title": "SBT · pedido remetido à PGR", "url": "https://sbtnews.sbt.com.br/noticia/politica/stj-manda-para-pgr-pedido-de-investigacao-sobre-governador-ibaneis-rocha-e-caso-master"}]},
+    {"name": "Hugo Motta", "note": "Menções em mensagens e ações eleitorais têm natureza distinta de investigação criminal individual. Essa condição não foi confirmada nesta revisão; não incluído nos totais.", "sources": [{"title": "UOL · citados não são necessariamente investigados", "url": "https://noticias.uol.com.br/eleicoes/2026/10/04/maioria-dos-politicos-citados-no-caso-master-consegue-se-eleger.amp.htm"}]},
+    {"name": "JHC", "note": "A decisão do TRE-AL de setembro afirmou que os documentos apresentados não demonstravam investigação penal contra ele. Ser prefeito na época das aplicações não permite incluí-lo automaticamente.", "sources": [{"title": "Poder360 · decisão do TRE-AL", "url": "https://www.poder360.com.br/poder-eleicoes-2026/justica-manda-retirar-video-de-renan-filho-sobre-jhc-e-banco-master/"}]},
+    {"name": "Danilo Joan", "note": "A CNN informou que o ex-prefeito não era investigado na fase da Off-Balance de maio. Outros processos não são automaticamente ligados ao Master.", "sources": [{"title": "CNN · alcance da Off-Balance", "url": "https://www.cnnbrasil.com.br/blogs/elijonasmaia/politica/master-pf-faz-operacao-sobre-gestao-de-previdencias-em-sp/"}]},
+    {"name": "Vilmar Mariano e Einstein Paniago", "note": "A CNN registra seus nomes em apurações sobre o AparecidaPrev. A fonte consultada não identifica medida judicial individual ou procedimento formal contra cada um; essa condição fica pendente de verificação.", "sources": [{"title": "CNN · apurações em Aparecida de Goiânia", "url": "https://www.cnnbrasil.com.br/politica/pf-fecha-cerco-a-politicos-de-goias-que-investiram-em-fundos-do-master/"}]}
+  ]
+}

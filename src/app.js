@@ -74,3 +74,17 @@ rppsFilters.querySelectorAll('button').forEach(button=>button.addEventListener('
   rppsFilters.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
   filterRpps();
 }));
+
+const electionFilters = document.querySelector('.election-filters');
+const electionRows = [...document.querySelectorAll('.election-row')];
+electionFilters.hidden = false;
+electionFilters.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
+  let visibleCount = 0;
+  electionFilters.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item === button)));
+  electionRows.forEach(row=>{
+    const visible = button.dataset.result === 'all' || row.dataset.result === button.dataset.result;
+    row.hidden = !visible;
+    if (visible) visibleCount++;
+  });
+  document.querySelector('.election-count').textContent = `${visibleCount} de ${electionRows.length} nomes exibidos.`;
+}));

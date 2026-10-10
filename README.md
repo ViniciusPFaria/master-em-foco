@@ -65,6 +65,7 @@ Abra `http://127.0.0.1:4173`. O build gera `dist/`, que fica fora do Git.
 - `data/cases.json`: valores, recortes, fontes e parâmetros cambiais.
 - `data/affected.json`: cobertura do FGC, recortes de instituições e 21 RPPS com fontes.
 - `data/rpps-politics.json`: chefes do Executivo no período dos aportes, partidos, referências temporais e fontes. O build combina esses dados ao download de afetados.
+- `data/elections.json`: políticos com investigação individual documentada e resultados de 2026. Distingue reeleição, primeiro mandato/mudança de cargo, derrota, segundo turno e outros registros. Procedimentos sigilosos impedem garantir uma lista exaustiva. Nomes apenas citados ou com classificação pendente têm notas separadas; não integram os totais.
 - `scripts/build.mjs`: gera a página estática a partir dos dados.
 - `.openai/hosting.json`: identificação e configuração de hospedagem do Sites.
 
@@ -78,4 +79,4 @@ A fonte acima é um ponto de partida para a cobertura do caso. As fontes especí
 
 ## Estado do projeto
 
-Comparação de valores e seção de afetados implementadas em HTML, CSS e JavaScript, com layout responsivo, fontes consultáveis e dados exportáveis. As demais seções propostas ainda serão desenvolvidas.
+Comparação de valores, afetados e seção final de investigados e eleições de 2026 implementadas em HTML, CSS e JavaScript, com layout responsivo, filtros, fontes consultáveis e dados exportáveis. A seção eleitoral usa resultados confirmados até 10/10/2026; o segundo turno ainda está pendente e não há atualização automática.
